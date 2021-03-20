@@ -212,7 +212,7 @@
 					    number: num,
 					    numberStep: comma_separator_number_step
 					  // vvvv NUMBER ANIMATE TIME (MS)
-					  }, 1500
+					  }, 3000
 					  // ^^^^ NUMBER ANIMATE TIME (MS)
 					);
 				});
