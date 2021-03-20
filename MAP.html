@@ -3657,7 +3657,12 @@ var geojsonFeature = [{
      iconUrl: 'images/CIRCLE.png'
  });
  return L.marker(latlng, {icon: smallIcon});
+  },
+      
+      onEachFeature: function (feature, layer) {
+    layer.bindPopup('<h1>'+(feature.properties.pred="-1" ? "Depressed" : "Undepressed") +'</h1><p>Heartrate: '+Math.round(feature.properties.heartrate)+'</p><p>Sleep quality: '+feature.properties.sleepQuality+'</p>');
   }
+      
 }).addTo(mymap);
 
 </script>
