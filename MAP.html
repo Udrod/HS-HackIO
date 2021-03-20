@@ -3641,9 +3641,16 @@ var geojsonFeature = [{
    
 L.geoJSON(geojsonFeature, {
   onEachFeature: function (feature, layer) {
-    layer.bindPopup('<h1>'+feature.properties.f1+'</h1><p>name: '+feature.properties.f2+'</p>');
+    layer.bindPopup('<h1>'+feature.properties.pred+'</h1><p>Heartrate: '+feature.properties.heartrate+'</p><p>Sleep quality: '+feature.properties.sleepQuality+'</p>');
   }
-}).addTo(mymap);
+}, {
+   d = feature.properties.pred;
+           return d = -1 ? {color: '#00FF7F', opacity:0.7} :
+               d = 1 ? {color: '#BD0026', opacity:0.7} :
+               {color: '#FFEDA0', opacity:0.7};
+           
+}
+         ).addTo(mymap);
 
 </script>
 </body>
