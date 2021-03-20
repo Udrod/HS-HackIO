@@ -3643,7 +3643,7 @@ var geojsonFeature = [{
     style: {color: '#00FF7F', opacity:0.7},
    icon: greenIcon,
    onEachFeature: function (feature, layer) {
-    layer.bindPopup('<h1>'+(feature.properties.pred="-1" ? "Depressed" : "Undepressed") +'</h1><p>Heartrate: '+Math.round(feature.properties.heartrate)+'</p><p>Sleep quality: '+feature.properties.sleepQuality+'</p>');
+    layer.bindPopup('<h1>'+(feature.properties.pred="-1" ? "Depressed" : "Undepressed") +'</h1><p>Heartrate: '+Math.round(feature.properties.heartrate)+' BPM</p><p>Sleep quality: '+feature.properties.sleepQuality+'</p>');
   }
 
 }).addTo(mymap);*/
@@ -3660,7 +3660,7 @@ var geojsonFeature = [{
   },
       
       onEachFeature: function (feature, layer) {
-    layer.bindPopup('<h1>'+(feature.properties.pred="-1" ? "Depressed" : "Undepressed") +'</h1><p>Heartrate: '+Math.round(feature.properties.heartrate)+'</p><p>Sleep quality: '+feature.properties.sleepQuality+'</p><p>Time in bed: '+feature.properties.timeInBed+'</p>');
+    layer.bindPopup('<h1>'+(feature.properties.pred="-1" ? "Depressed" : "Undepressed") +'</h1><p>Heartrate: '+Math.round(feature.properties.heartrate)+' BPM</p><p>Sleep quality: '+feature.properties.sleepQuality+'%</p><p>Time in bed: '+feature.properties.timeInBed+' minutes</p>');
   }
       
 }).addTo(mymap);
