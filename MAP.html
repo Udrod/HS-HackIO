@@ -3651,12 +3651,17 @@ var geojsonFeature = [{
     shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
 });
    
-L.geoJSON(geojsonFeature, {
+/*L.geoJSON(geojsonFeature, {
     style: {color: '#00FF7F', opacity:0.7},
    icon: greenIcon,
    onEachFeature: function (feature, layer) {
     layer.bindPopup('<h1>'+(feature.properties.pred="-1" ? "Depressed" : "Undepressed") +'</h1><p>Heartrate: '+Math.round(feature.properties.heartrate)+'</p><p>Sleep quality: '+feature.properties.sleepQuality+'</p>');
   }
+
+}).addTo(mymap);*/
+   
+   L.geoJSON(geojsonFeature, {
+   icon: greenIcon
 
 }).addTo(mymap);
 
