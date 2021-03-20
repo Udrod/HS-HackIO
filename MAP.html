@@ -3640,10 +3640,11 @@ var geojsonFeature = [{
    
    
 L.geoJSON(geojsonFeature, {
-  onEachFeature: function (feature, layer) {
+    style: {color: '#00FF7F', opacity:0.7},
+   onEachFeature: function (feature, layer) {
     layer.bindPopup('<h1>'+feature.properties.pred+'</h1><p>Heartrate: '+feature.properties.heartrate+'</p><p>Sleep quality: '+feature.properties.sleepQuality+'</p>');
-  },
-  style: {color: '#00FF7F', opacity:0.7}
+  }
+ 
 }).addTo(mymap);
 
 </script>
