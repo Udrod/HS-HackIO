@@ -211,7 +211,9 @@
 					  {
 					    number: num,
 					    numberStep: comma_separator_number_step
-					  }, 7000
+					  // vvvv NUMBER ANIMATE TIME (MS)
+					  }, 1500
+					  // ^^^^ NUMBER ANIMATE TIME (MS)
 					);
 				});
 				
