@@ -3639,7 +3639,11 @@ var geojsonFeature = [{
 
    
    
-L.geoJSON(geojsonFeature).addTo(mymap);
+L.geoJSON(geojsonFeature, {
+  onEachFeature: function (feature, layer) {
+    layer.bindPopup('<h1>'+feature.properties.f1+'</h1><p>name: '+feature.properties.f2+'</p>');
+  }
+}).addTo(mymap);
 
 </script>
 </body>
